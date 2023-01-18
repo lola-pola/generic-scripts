@@ -1,4 +1,5 @@
-$1=token
+token=$1
+export token=$1
 sudo wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt update 
