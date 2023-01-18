@@ -11,5 +11,5 @@ sudo mkdir myagent && sudo cd myagent && sudo chmod -R 777 *
 sudo wget https://vstsagentpackage.azureedge.net/agent/2.214.1/vsts-agent-linux-x64-2.214.1.tar.gz
 sudo tar zxvf vsts-agent-linux-x64-2.214.1.tar.gz
 sudo -E bash -c 'echo $token'
-export AGENT_ALLOW_RUNASROOT="1" && sudo -E bash -c './config.sh remove --url https://dev.azure.com/elhayefrat --acceptTeeEula --auth pat --token $token'
-export AGENT_ALLOW_RUNASROOT="1" && sudo -E bash -c './config.sh --replace --work _work --acceptTeeEula --url https://dev.azure.com/elhayefrat --auth pat --token $token --agent agent-${hostname} --pool 'test' && ./run.sh --once'
+export AGENT_ALLOW_RUNASROOT="1" && sudo -E ./config.sh remove --url https://dev.azure.com/elhayefrat --acceptTeeEula --auth pat --token $token
+export AGENT_ALLOW_RUNASROOT="1" && sudo -E ./config.sh --replace --work _work --acceptTeeEula --url https://dev.azure.com/elhayefrat --auth pat --token $token --agent agent-${hostname} --pool 'test' && ./run.sh --once
